@@ -2,20 +2,14 @@
 #![allow(non_snake_case)]
 #![allow(non_upper_case_globals)]
 
-extern crate libc;
 extern crate sdl2;
 
-use libc::exit;
-
-use sdl2::audio::AudioFormat;
-use sdl2::audio::AudioFormatNum;
 use sdl2::audio::AudioQueue;
 use sdl2::event::*;
 use sdl2::keyboard::*;
 use sdl2::pixels::*;
 use sdl2::render::*;
 use sdl2::video::*;
-use sdl2::AudioSubsystem;
 use sdl2::Sdl;
 use sdl2::TimerSubsystem;
 
