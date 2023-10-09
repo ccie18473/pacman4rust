@@ -254,7 +254,7 @@ pub fn mainloop(g: &mut game) {
                     Scancode::Tab => {
                         g.speed = 1;
                         // clear the queued audio to avoid audio delays
-                        //SDL_ClearQueuedAudio(audio_device);
+                        g.audio_device.clear();
                     }
                     _ => {}
                 }
