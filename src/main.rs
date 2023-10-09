@@ -142,7 +142,7 @@ pub fn send_quit_event(g: &mut game) {
     g.should_quit = true;
 }
 
-pub fn screenshot(g: &mut game) {
+pub fn screenshot(_g: &mut game) {
     //println!("screenshot");
 }
 

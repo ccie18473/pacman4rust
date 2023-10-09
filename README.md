@@ -69,6 +69,24 @@ cargo run --release
 
 ```
 
+## Controls
+
+| Key(s)               | Action                  |
+| -------------------- | ----------------------- |
+| 5 or C               | `Insert Coin`           |
+| 1 or Return          | `Start 1 Player`        |
+| 2                    | `Start 2 Players`       |
+| Up Arrow             | `Move Up`               |
+| Down Arrow           | `Move Down`             |
+| Left Arrow           | `Move Left`             |
+| Right Arrow          | `Move Right`            |
+| M                    | `Mute/Unmute`           |
+| P                    | `Pause/Resume`          |
+| I                    | `Invincibility`         |
+| T                    | `Board Test/Reset`      |
+| Tab                  | `Speed x5`              |
+
+
 ## Author
 
 * [Antonio Soares](https://github.com/ccie18473)

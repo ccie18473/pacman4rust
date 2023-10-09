@@ -219,7 +219,7 @@ fn wb(userdata: &mut userdata, addr: u16, val: u8) {
     }
 }
 
-pub fn port_in(z: &mut z80::z80, _port: u8) -> u8 {
+pub fn port_in(_z: &mut z80::z80, _port: u8) -> u8 {
     //println!("port_in");
 
     return 0;
@@ -237,7 +237,7 @@ pub fn port_out(z: &mut z80::z80, port: u8, val: u8) {
 }
 
 // copies "nb_bytes" bytes from a file into memory
-pub fn load_file(filename: &str, memory: &mut [u8], nb_bytes: usize) -> i32 {
+pub fn load_file(filename: &str, memory: &mut [u8], _nb_bytes: usize) -> i32 {
     //println!("load_file");
 
     let mut f = File::open(filename).unwrap();
@@ -281,7 +281,7 @@ pub fn get_palette(g: &mut game, pal_no: u8, pal: &mut [u8; 4]) {
 // decodes a strip from pacman tile/sprite roms to a bitmap output where each
 // byte represents one pixel.
 pub fn decode_strip(
-    g: &mut game,
+    _g: &mut game,
     input: *mut u8,
     output: *mut u8,
     bx: i32,
@@ -606,10 +606,8 @@ pub fn pac_init(g: &mut game) -> i32 {
     return r;
 }
 
-pub fn pac_quit(g: &mut game) {
+pub fn pac_quit(_g: &mut game) {
     //println!("pac_quit");
-
-    //free(p->audio_buffer);
 }
 
 // updates emulation for "ms" milliseconds.
