@@ -77,4 +77,4 @@ cargo run --release
 
 This project is licensed under the [MIT] License - see the LICENSE.md file for details
 
-The DOOM textures are copyrighted by id Software.
+The Pac-Man textures are copyrighted by Namco.
