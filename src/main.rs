@@ -4,6 +4,7 @@
 
 extern crate sdl2;
 
+use sdl2::AudioSubsystem;
 use sdl2::audio::AudioQueue;
 use sdl2::event::*;
 use sdl2::keyboard::*;
@@ -44,6 +45,7 @@ pub struct game<'a> {
     pub sdl_context: Sdl,
     pub timer: TimerSubsystem,
     pub renderer: Canvas<Window>,
+    pub audio: AudioSubsystem,
     pub audio_device: AudioQueue<i16>,
     pub p: pac::pac<'a>,
     pub current_time: u32,
@@ -98,6 +100,7 @@ impl<'a> game<'a> {
             sdl_context,
             timer,
             renderer,
+            audio,
             audio_device,
             p: pac::pac::new(),
             current_time: 0,
@@ -271,8 +274,13 @@ fn main() {
     let mut g = game::new();
 
     // print info on renderer:
+    let renderer_info = g.renderer.info();
+    println!("INFO: Using renderer {}",renderer_info.name);
 
     // audio init
+
+    let driver_name = g.audio.current_audio_driver();
+    println!("INFO: audio device has been opened ({})", driver_name);
 
     g.audio_device.resume(); // start playing
 
