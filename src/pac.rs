@@ -430,9 +430,9 @@ pub fn draw_sprite(
             continue;
         }
 
-        let mut r = game.p.screen_buffer[screenbuf_pos as usize * 3 + 0];
-        let mut g = game.p.screen_buffer[screenbuf_pos as usize * 3 + 1];
-        let mut b = game.p.screen_buffer[screenbuf_pos as usize * 3 + 2];
+        let mut r = 0;
+        let mut g = 0;
+        let mut b = 0;
 
         get_color(game, pal[color as usize], &mut r, &mut g, &mut b);
 
